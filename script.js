@@ -140,6 +140,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Hamburger menu functionality
+    const hamButton = document.querySelector("#menu");
+    const navigation = document.querySelector("nav ul"); // Target the ul directly
+
+    if (hamButton && navigation) { // Check if elements exist before adding event listener
+        hamButton.addEventListener("click", () => {
+            navigation.classList.toggle("open");
+            hamButton.classList.toggle("open");
+        });
+    }
 
     // Initial render when pages load
     renderTasks(); // Always try to render main tasks
