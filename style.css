@@ -1,0 +1,331 @@
+/* Universal Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Example Google Font */
+    line-height: 1.6;
+    background-color: #f4f7f6; /* Light background */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Color Palette Variables */
+:root {
+    --primary-color: #6a0572;   /* Deep Purple */
+    --secondary-color: #ab47bc; /* Medium Purple */
+    --accent-color: #efcf69;    /* Gold/Yellow for highlights */
+    --text-color: #333;
+    --light-grey: #f4f7f6;
+    --dark-grey: #555;
+    --success-color: #4CAF50;   /* Green for completed tasks */
+    --danger-color: #f44336;    /* Red for clear/delete actions */
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content Sections */
+section {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* To-Do List Specific Styles */
+.todo-input-section .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#new-task-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#add-task-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#add-task-button:hover {
+    background-color: #8e24aa; /* Darker secondary color */
+}
+
+#task-list, #completed-tasks-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li, #completed-tasks-list li {
+    background-color: var(--light-grey);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid var(--secondary-color);
+}
+
+#completed-tasks-list li {
+    border-left: 5px solid var(--success-color);
+    text-decoration: line-through;
+    color: var(--dark-grey);
+}
+
+#task-list li.completed { /* Class added by JS for completed tasks on the main list */
+    text-decoration: line-through;
+    color: var(--dark-grey);
+    border-left-color: var(--success-color);
+}
+
+#task-list li .task-text {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+#task-list li button, #completed-tasks-list li button {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-left: 8px; /* Spacing between buttons */
+}
+
+#task-list li .complete-button {
+    background-color: var(--success-color);
+}
+
+#task-list li button:hover {
+    opacity: 0.9;
+}
+
+.clear-button {
+    background-color: var(--danger-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block; /* Make it a block element */
+    margin: 20px auto 0 auto; /* Center it below the list */
+    transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+
+/* Hero Section */
+.hero-section, .motivation-section, .tips-hero {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.hero-section .hero-text, .motivation-section .motivation-text, .tips-hero {
+    flex: 1; /* Takes available space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.hero-section img, .motivation-section img, .productivity-tips-list .tip-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Ensures image covers area without distortion */
+    flex: 1; /* Takes available space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+/* Productivity Tips Page */
+.productivity-tips-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 25px;
+}
+
+.tip-card {
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.tip-card h3 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.tip-card img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark-grey);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Responsive Design (Media Queries) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 15px;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .todo-input-section .input-group {
+        flex-direction: column;
+    }
+
+    #add-task-button {
+        width: 100%;
+    }
+
+    .hero-section, .motivation-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section img, .motivation-section img {
+        width: 100%;
+    }
+
+    .productivity-tips-list {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    #task-list li, #completed-tasks-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    #task-list li button, #completed-tasks-list li button {
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0;
+    }
+}

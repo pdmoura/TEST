@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Completed Tasks To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">My To-Do List</a>
+      </div>
+      <ul>
+        <li><a href="index.html">To-Do List</a></li>
+        <li><a href="completed-tasks.html">Completed Tasks</a></li>
+        <li><a href="productivity-tips.html">Productivity Tips</a></li>
+        <li><a href="references.html">References</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="completed-tasks-section">
+      <h1>Your Achievements</h1>
+      <p>A list of all the tasks you've successfully completed.</p>
+      <ul id="completed-tasks-list">
+      </ul>
+      <button id="clear-completed-button" class="clear-button">Clear Completed List</button>
+    </section>
+
+    <section class="motivation-section">
+      <img src="https://picsum.photos/id/883/950/550" alt="Person celebrating success" class="responsive-image">
+      <div class="motivation-text">
+        <h3>Great Job!</h3>
+        <p>Every completed task brings you closer to your goals.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My To-Do List App. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
