@@ -223,8 +223,6 @@ h3 {
 .tips-hero {
     flex: 1;
     /* Takes available space */
-    /* min-width: 300px; */
-    /* Minimum width before wrapping */
 }
 
 .hero-section img,
