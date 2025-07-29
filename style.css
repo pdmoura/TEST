@@ -223,7 +223,7 @@ h3 {
 .tips-hero {
     flex: 1;
     /* Takes available space */
-    min-width: 300px;
+    /* min-width: 300px; */
     /* Minimum width before wrapping */
 }
 
@@ -237,9 +237,16 @@ h3 {
     /* Ensures image covers area without distortion */
     flex: 1;
     /* Takes available space */
-    min-width: 300px;
-    /* Minimum width before wrapping */
+
 }
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    /* Ensures images are responsive */
+}
+
+
 
 /* Productivity Tips Page */
 .productivity-tips-list {
