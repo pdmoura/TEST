@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const li = document.createElement('li');
             li.setAttribute('data-index', index);
             li.innerHTML = `
-                <span class="task-text">${task.text}</span>
+                <span class="task-text" id=dashed-text>${task.text}</span>
                 <button class="delete-completed-button">Delete</button>
             `;
             completedTasksList.appendChild(li);

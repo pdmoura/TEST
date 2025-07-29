@@ -148,13 +148,11 @@ h3 {
 
 #completed-tasks-list li {
     border-left: 5px solid var(--success-color);
-    text-decoration: line-through;
     color: var(--dark-grey);
 }
 
 #task-list li.completed {
     /* Class added by JS for completed tasks on the main list */
-    text-decoration: line-through;
     color: var(--dark-grey);
     border-left-color: var(--success-color);
 }
@@ -162,7 +160,14 @@ h3 {
 #task-list li .task-text {
     flex-grow: 1;
     margin-right: 15px;
+
 }
+
+#dashed-text {
+    text-decoration: line-through;
+    /* Style for completed tasks */
+}
+
 
 #task-list li button,
 #completed-tasks-list li button {
