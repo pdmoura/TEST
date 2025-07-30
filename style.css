@@ -41,8 +41,10 @@ body {
     --light-grey: #f4f7f6;          /* Seasalt - light background for clean interface */
     --dark-grey: #555;              /* Medium Gray - secondary text */
     --success-color: #09620c;       /* Dark Green - for completed task indicators */
-    --danger-color: #db0b0b;        /* Vivid Red - for delete/clear actions */
+    --danger-color: #b00303;        /* Vivid Red - for delete/clear actions */
 }
+
+/* https://coolors.co/1e3a8a-24539e-ffedb3-333333-f4f7f6 */
 
 
 /* Header & Navigation */
