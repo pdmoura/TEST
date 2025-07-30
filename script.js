@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             li.innerHTML = `
                 <span class="task-text">${task.text}</span>
-                <div>
+                <div class="button-group">
                     <button class="complete-button">${task.completed ? 'Uncomplete' : 'Complete'}</button>
                     <button class="delete-button">Delete</button>
                 </div>
@@ -84,13 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (task.completed) {
                     completedTasks.push(task); // Add to completed tasks list
                     tasks.splice(index, 1); // Remove from main tasks list
-                } else {
-                    // If uncompleted, it means it was previously moved from tasks to completedTasks
-                    // This scenario is not directly handled by moving back to tasks array
-                    // For simplicity, we assume tasks are completed and then moved.
-                    // If you want to move them back, you'd need a different logic.
                 }
-
+          
                 saveTasks();
                 saveCompletedTasks();
                 renderTasks(); // Re-render main list

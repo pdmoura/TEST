@@ -5,13 +5,25 @@
     padding: 0;
 }
 
+
+/* Apply flexbox only to the references page body */
+body.references-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
 body {
     font-family: 'Roboto', sans-serif;
     /* Example Google Font */
     line-height: 1.6;
-    background-color: #f4f7f6;
+    background-color: var(--light-grey);
     /* Light background */
     color: #333;
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
 }
 
 .container {
@@ -21,21 +33,28 @@ body {
 }
 
 /* Color Palette Variables */
-:root {
-    --primary-color: #6a0572;
-    /* Deep Purple */
-    --secondary-color: #ab47bc;
-    /* Medium Purple */
-    --accent-color: #efcf69;
-    /* Gold/Yellow for highlights */
+/* :root {
+    --primary-color: #1E3A8A;
+    --secondary-color: #24539e;
+    --accent-color: #ffedb3;
     --text-color: #333;
     --light-grey: #f4f7f6;
     --dark-grey: #555;
-    --success-color: #4CAF50;
-    /* Green for completed tasks */
-    --danger-color: #f44336;
-    /* Red for clear/delete actions */
+    --success-color: #09620c;
+    --danger-color: #db0b0b;
+} */
+
+:root {
+    --primary-color: #1E3A8A;       /* Deep Navy Blue - header/nav background */
+    --secondary-color: #24539e;     /* Cool Blue - buttons and interactive elements */
+    --accent-color: #ffedb3;        /* Soft Gold - highlights or emphasis */
+    --text-color: #333333;             /* Dark Gray - main text */
+    --light-grey: #f4f7f6;          /* Seasalt - light background for clean interface */
+    --dark-grey: #555;              /* Medium Gray - secondary text */
+    --success-color: #09620c;       /* Dark Green - for completed task indicators */
+    --danger-color: #db0b0b;        /* Vivid Red - for delete/clear actions */
 }
+
 
 /* Header & Navigation */
 header {
@@ -79,6 +98,8 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--accent-color);
+    text-decoration: overline;
+
 }
 
 /* Main Content Sections */
@@ -124,7 +145,8 @@ h3 {
 }
 
 #add-task-button:hover {
-    background-color: #8e24aa;
+    background-color: #00457a;
+    color: var(--accent-color);
     /* Darker secondary color */
 }
 
@@ -144,6 +166,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     border-left: 5px solid var(--secondary-color);
+    flex-wrap: nowrap;
 }
 
 #completed-tasks-list li {
@@ -168,6 +191,14 @@ h3 {
     /* Style for completed tasks */
 }
 
+.button-group {
+    display: flex;
+    flex-shrink: 0;
+    gap: 8px;
+    /* Space between buttons */
+}
+
+
 
 #task-list li button,
 #completed-tasks-list li button {
@@ -186,6 +217,7 @@ h3 {
 #task-list li .complete-button {
     background-color: var(--success-color);
 }
+
 
 #task-list li button:hover {
     opacity: 0.9;
@@ -207,8 +239,7 @@ h3 {
 }
 
 .clear-button:hover {
-    background-color: #d32f2f;
-    /* Darker red */
+    background-color: #c12206;
 }
 
 /* Hero Section */
@@ -249,7 +280,13 @@ h3 {
     /* Ensures images are responsive */
 }
 
-
+/* Motivation Section */
+/* Specific adjustments for motivation-section to stack image and text vertically */
+.motivation-section {
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Adjust gap between image and text if needed */
+}
 
 /* Productivity Tips Page */
 .productivity-tips-list {
@@ -293,7 +330,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    margin-top: auto;
 }
 
 
@@ -336,9 +374,8 @@ footer {
         display: block;
     }
 
-    /* The crucial change: Apply 'open' class directly to 'ul' */
+    /* Hide the navigation links by default */
     nav ul.open {
-        /* This now means: a <ul> element that has the class 'open' AND is inside a <nav> */
         display: flex;
         /* Show the navigation links */
     }
@@ -409,7 +446,9 @@ footer {
         grid-template-columns: 1fr;
         /* Single column on small screens */
     }
+
 }
+
 
 @media (max-width: 480px) {
     h1 {
@@ -433,4 +472,5 @@ footer {
         width: 100%;
         margin-left: 0;
     }
+
 }
