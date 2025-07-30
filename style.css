@@ -33,22 +33,11 @@ body {
 }
 
 /* Color Palette Variables */
-/* :root {
-    --primary-color: #1E3A8A;
-    --secondary-color: #24539e;
-    --accent-color: #ffedb3;
-    --text-color: #333;
-    --light-grey: #f4f7f6;
-    --dark-grey: #555;
-    --success-color: #09620c;
-    --danger-color: #db0b0b;
-} */
-
 :root {
     --primary-color: #1E3A8A;       /* Deep Navy Blue - header/nav background */
     --secondary-color: #24539e;     /* Cool Blue - buttons and interactive elements */
     --accent-color: #ffedb3;        /* Soft Gold - highlights or emphasis */
-    --text-color: #333333;             /* Dark Gray - main text */
+    --text-color: #333333;          /* Dark Gray - main text */
     --light-grey: #f4f7f6;          /* Seasalt - light background for clean interface */
     --dark-grey: #555;              /* Medium Gray - secondary text */
     --success-color: #09620c;       /* Dark Green - for completed task indicators */
