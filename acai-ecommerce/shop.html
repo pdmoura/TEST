@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Cream - Shop</title>
+    <meta name="description" content="Browse our menu of delicious and healthy açaí bowls. Order online now!">
+    <meta property="og:title" content="Purple Cream - Online Menu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:url" content="https://your-website-url.com/shop">
+
+    <link rel="icon" href="images/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base-responsive.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shop-cart.css">
+
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/shop.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.webp" alt="Purple Cream Logo" width="50" height="50">
+                <h1>Purple Cream</h1>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Our Story</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <div class="cart-icon-wrapper">
+             <img id="cart-icon" src="https://placehold.co/40x40/8A2BE2/FFFFFF?text=Cart" alt="Shopping Cart" style="cursor: pointer;">
+             <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-intro">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <p>Explore our variety of freshly made açaí bowls. Each one is a unique experience!</p>
+            </div>
+        </section>
+
+        <section class="product-grid-container">
+            <div id="product-grid" class="product-grid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-summary">
+                <p>Subtotal: <span id="cart-subtotal">$0.00</span></p>
+                <p>Tax (10%): <span id="cart-tax">$0.00</span></p>
+                <p><strong>Total:</strong> <span id="cart-total">$0.00</span></p>
+            </div>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-icon">
+        <img src="https://placehold.co/50x50/25D366/FFFFFF?text=WA" alt="WhatsApp">
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> Purple Cream. All Rights Reserved.</p>
+            <div class="social-media">
+                 <a href="#"><img src="https://placehold.co/30x30/3b5998/FFFFFF?text=f" alt="Facebook"></a>
+                <a href="#"><img src="https://placehold.co/30x30/E4405F/FFFFFF?text=in" alt="Instagram"></a>
+                <a href="#"><img src="https://placehold.co/30x30/1DA1F2/FFFFFF?text=tw" alt="Twitter"></a>
+            </div>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

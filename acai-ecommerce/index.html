@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Cream - Home</title>
+    <meta name="description" content="Welcome to Purple Cream, your favorite açaí and ice cream shop. Discover our delicious menu and order online.">
+    <meta property="og:title" content="Purple Cream - Delicious Açaí & Ice Cream">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:url" content="https://your-website-url.com">
+
+    <link rel="icon" href="images/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base-responsive.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/main.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.webp" alt="Purple Cream Logo" width="50" height="50">
+                <h1>Purple Cream</h1>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Our Story</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Taste the Freshness of the Amazon</h2>
+                <p>Delicious, healthy, and refreshing açaí bowls made with love.</p>
+                <a href="shop.html" class="cta-button">Explore Our Menu</a>
+            </div>
+        </section>
+
+        <!-- About Us Preview -->
+        <section class="about-preview">
+            <div class="container">
+                <h2>Our Story</h2>
+                <p>Purple Cream started with a simple idea: to share the authentic taste of Amazonian açaí with the world. Our journey is one of passion for quality and a commitment to healthy, delicious food. We believe in fresh ingredients and creating a community around our love for açaí.</p>
+                <a href="about.html" class="learn-more-btn">Learn More</a>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-form">
+                        <form action="thankyou.html" method="get">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Our Location</h3>
+                        <p>123 Açaí Street, Flavor Town, 12345</p>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086591873832!2d-122.4217283846816!3d37.78331197975842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809a6b0c29a1%3A0x86c7613fa8952d3d!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-icon">
+        <img src="https://placehold.co/50x50/25D366/FFFFFF?text=WA" alt="WhatsApp">
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> Purple Cream. All Rights Reserved.</p>
+            <div class="social-media">
+                <a href="#"><img src="https://placehold.co/30x30/3b5998/FFFFFF?text=f" alt="Facebook"></a>
+                <a href="#"><img src="https://placehold.co/30x30/E4405F/FFFFFF?text=in" alt="Instagram"></a>
+                <a href="#"><img src="https://placehold.co/30x30/1DA1F2/FFFFFF?text=tw" alt="Twitter"></a>
+            </div>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

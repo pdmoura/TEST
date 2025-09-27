@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Cream - Thank You</title>
+    <link rel="icon" href="images/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base-responsive.css">
+    <link rel="stylesheet" href="css/thankyou.css">
+
+    <script src="js/main.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.webp" alt="Purple Cream Logo" width="50" height="50">
+                <h1>Purple Cream</h1>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Our Story</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="thank-you-message">
+            <h1>Thank You!</h1>
+            <p>Your message has been sent successfully. We will get back to you shortly.</p>
+            <div id="form-data-display">
+                <!-- Form data will be displayed here by JS -->
+            </div>
+            <a href="index.html" class="back-home-button">Back to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> Purple Cream. All Rights Reserved.</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const formDataDisplay = document.getElementById('form-data-display');
+            const urlParams = new URLSearchParams(window.location.search);
+            let dataHtml = '<h3>Your Submission:</h3><ul>';
+            let hasData = false;
+            for (const [key, value] of urlParams.entries()) {
+                hasData = true;
+                dataHtml += `<li><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</li>`;
+            }
+            dataHtml += '</ul>';
+
+            if (hasData) {
+                formDataDisplay.innerHTML = dataHtml;
+            } else {
+                formDataDisplay.innerHTML = '<p>No data submitted.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

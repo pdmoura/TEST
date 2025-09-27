@@ -467,13 +467,24 @@ section {
 }
 
 .card-inner img {
-    width: 70%;
+    width: 100%;
     border-radius: 10px;
     margin-bottom: 1rem;
     background-color: white;
     padding: 1rem;
     box-sizing: border-box;
 
+}
+
+.tech-tag {
+    background-color: #4B5563;
+    color: #FFFFFF;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
 }
 
 .close-btn {
@@ -570,6 +581,10 @@ section {
     resize: none;
 }
 
+.contact-form input, .contact-form textarea::placeholder {
+    font-size: 0.95rem;
+}
+
 .contact-form input:focus, .contact-form textarea:focus {
     outline: none;
     box-shadow: 0 0 0 2px #2563EB;
@@ -592,6 +607,7 @@ section {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 1em;
 }
 
 .contact-form button:hover {
@@ -914,8 +930,8 @@ footer {
                 <!-- Google Reviews Section -->
                 <div style="margin-top: 5rem;">
                     <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-                    <script src="https://elfsightcdn.com/platform.js" async></script>
-                    <div class="elfsight-app-f8373748-9dc9-4283-84ec-4546d3657208" data-elfsight-app-lazy></div>
+                    <!-- <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-f8373748-9dc9-4283-84ec-4546d3657208" data-elfsight-app-lazy></div> -->
                 </div>
 
             </div>
@@ -941,13 +957,13 @@ footer {
                     <form class="contact-form">
                         <div class="form-grid">
                             <input type="text" placeholder="Your Name">
-                            <input type="email" placeholder="Your Email">
+                            <input type="email" placeholder="Your Email" required>
                         </div>
                         <div class="full-width">
                              <input type="text" placeholder="Subject">
                         </div>
                         <div class="full-width">
-                            <textarea placeholder="Your Message" rows="5"></textarea>
+                            <textarea placeholder="Your Message" rows="5"></textarea required>
                         </div>
                         <div class="submit-button-wrapper">
                             <button type="submit">Send Message</button>
@@ -1016,8 +1032,13 @@ footer {
         <div class="card-inner">
             <button class="close-btn">&times;</button>
             <h2>Bank of America</h2>
-            <img src="https://brazilcham.com/wp-content/uploads/2018/12/bank-of-america-resized.jpg" alt="Bank of America"/>
-            <p>Details about the partnership with Bank of America.</p>
+            <img src="https://brazilcham.com/wp-content/uploads/2018/12/bank-of-america-resized.jpg" width="300" height="200" alt="Bank of America"/>
+            <p><strong>Technologies:</strong> 
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Terraform</span>
+            </p>
+            <p>Delivered a scalable and secure cloud infrastructure for their new fintech platform.</p>
         </div>
     </template>
     <template id="card-client-b">
@@ -1025,15 +1046,24 @@ footer {
             <button class="close-btn">&times;</button>
             <h2>Banco do Brasil</h2>
             <img src="https://brazilcham.com/wp-content/uploads/2018/12/platinum-banco-do-brasil.jpg" alt="Banco do Brasil"/>
-            <p>Details about the partnership with Banco do Brasil.</p>
-        </div>
+            <p><strong>Technologies:</strong> 
+                <span class="tech-tag">Azure</span>
+                <span class="tech-tag">.NET</span>
+                <span class="tech-tag">Ansible</span>
+            </p>
+            <p>Executed a full-scale migration of their legacy systems to a modern cloud-native architecture.</p>        </div>
     </template>
     <template id="card-client-c">
         <div class="card-inner">
             <button class="close-btn">&times;</button>
             <h2>JP Morgan</h2>
             <img src="https://brazilcham.com/wp-content/uploads/2018/12/platinum-jp-morgan.jpg" alt="JP Morgan"/>
-            <p>Details about the partnership with JP Morgan.</p>
+            <p><strong>Technologies:</strong> 
+                <span class="tech-tag">GCP</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">Jenkins</span>
+            </p>
+            <p>Implemented a CI/CD pipeline that reduced deployment times by 80%.</p>
         </div>
     </template>
     <template id="card-client-d">
@@ -1041,7 +1071,12 @@ footer {
             <button class="close-btn">&times;</button>
             <h2>Itaú BBA</h2>
             <img src="https://brazilcham.com/wp-content/uploads/2018/12/platinum-itau-bba.jpg" alt="Itau BBA"/>
-            <p>Details about the partnership with Itaú BBA.</p>
+            <p><strong>Technologies:</strong> 
+                <span class="tech-tag">AWS Lambda</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Serverless</span>
+            </p>
+            <p>Developed a serverless data processing solution to handle millions of daily transactions.</p>
         </div>
     </template>
     <template id="card-client-e">
@@ -1049,7 +1084,12 @@ footer {
             <button class="close-btn">&times;</button>
             <h2>Safra</h2>
             <img src="https://brazilcham.com/wp-content/uploads/2020/03/safra.jpg" alt="Safra"/>
-            <p>Details about the partnership with Safra.</p>
+            <p><strong>Technologies:</strong> 
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Python</span>
+            </p>
+            <p>Provided a secure and compliant cloud environment for their wealth management services.</p>
         </div>
     </template>
 

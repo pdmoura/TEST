@@ -1,0 +1,64 @@
+/* about.css */
+
+.story-section, .team-section {
+    padding: 4rem 0;
+}
+
+.story-section h2, .team-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.story-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.story-section p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    text-align: justify;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    background: var(--white-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--primary-color);
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.team-member .title {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.team-member .description {
+    font-size: 0.9rem;
+}
